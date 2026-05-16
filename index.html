@@ -277,11 +277,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
 /* FAMILY SECTION */
 #family{padding:100px 80px;background:var(--dark-2);overflow:hidden}
 .family-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:56px}
-.family-photos{display:grid;grid-template-columns:1fr 1fr;gap:3px;height:480px}
-.fam-big{grid-column:1/-1;height:290px;overflow:hidden;border-radius:4px}
-.fam-small{height:187px;overflow:hidden;border-radius:4px}
-.fam-big img,.fam-small img{transition:transform 0.7s var(--ease-out);object-position:center 65%}
-.fam-big:hover img,.fam-small:hover img{transform:scale(1.04)}
+.family-photos{height:520px}
+.fam-single{height:100%;overflow:hidden;border-radius:4px}
+.fam-single img{transition:transform 0.7s var(--ease-out)}
+.fam-single:hover img{transform:scale(1.04)}
 .family-text{display:flex;flex-direction:column;gap:0}
 .family-quote{font-size:clamp(22px,3vw,36px);font-weight:700;color:var(--white);line-height:1.25;margin-bottom:20px}
 .family-quote .accent{color:var(--red)}
@@ -313,9 +312,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
   .mfg-layout{grid-template-columns:1fr}
   .trust-grid{grid-template-columns:1fr 1fr}
   .family-layout{grid-template-columns:1fr}
-  .family-photos{height:auto}
-  .fam-big{height:240px}
-  .fam-small{height:160px}
+  .family-photos{height:360px}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
@@ -371,9 +368,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
   .tc-text{font-size:13px}
   #family{padding:72px 20px}
   .family-layout{grid-template-columns:1fr;gap:32px;margin-top:32px}
-  .family-photos{height:auto;grid-template-columns:1fr 1fr}
-  .fam-big{height:240px;grid-column:1/-1}
-  .fam-small{height:140px}
+  .family-photos{height:300px}
   #delivery{padding:72px 20px}
   .del-content{grid-template-columns:1fr;gap:36px}
   .del-title{font-size:clamp(26px,7vw,40px)}
@@ -392,9 +387,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
   .stat-item{padding:28px 12px}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .g-item{height:120px}
-  .family-photos{grid-template-columns:1fr}
-  .fam-small{display:none}
-  .fam-big{height:260px;grid-column:1}
+  .family-photos{height:260px}
 }
 </style>
 </head>
@@ -752,14 +745,8 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
   <h2 class="sec-title" data-th="ครอบครัว<span class='accent'>ที่อยู่เบื้องหลัง</span>ทุกอย่าง" data-en="The <span class='accent'>Family</span> Behind Everything">ครอบครัว<span class="accent">ที่อยู่เบื้องหลัง</span>ทุกอย่าง</h2>
   <div class="family-layout">
     <div class="family-photos rev-l">
-      <div class="fam-big">
-        <img src="photos/IMG_4171.webp" alt="เจ้าของร้าน ภรรยา และลูก — ธงชัยพาณิชย์ปาย" loading="lazy">
-      </div>
-      <div class="fam-small">
-        <img src="photos/IMG_4170.webp" alt="ครอบครัวธงชัยหน้าร้าน" loading="lazy">
-      </div>
-      <div class="fam-small">
-        <img src="photos/IMG_4169.webp" alt="เจ้าของร้านและครอบครัว" loading="lazy">
+      <div class="fam-single">
+        <img src="photos/IMG_4171.webp" alt="เจ้าของร้าน ภรรยา และลูก — ธงชัยพาณิชย์ปาย" loading="lazy" style="object-position:center 30%">
       </div>
     </div>
     <div class="family-text rev-r">
