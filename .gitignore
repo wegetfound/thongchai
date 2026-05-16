@@ -1,0 +1,11 @@
+# Original source photos (large, not needed for web)
+*.HEIC
+*.MOV
+
+# Python dev scripts
+convert_heic.py
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
