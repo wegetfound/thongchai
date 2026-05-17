@@ -382,6 +382,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
   .footer-bottom{flex-direction:column;gap:6px;text-align:center;padding:16px 0}
   .float-call{display:flex}
   .lang-toggle{display:none}
+  .mobile-menu .lang-toggle{display:flex;margin-top:8px}
 }
 @media(max-width:420px){
   .stat-item{padding:28px 12px}
@@ -408,6 +409,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,0.05);paddin
   <a href="#manufacturing" class="nav-link" onclick="closeMobile()" data-th="โรงงาน" data-en="Factory">โรงงาน</a>
   <a href="#contact" class="nav-link" onclick="closeMobile()" data-th="ติดต่อ" data-en="Contact">ติดต่อ</a>
   <a href="tel:0871801836" class="m-call" data-th="📞 โทรเลย" data-en="📞 Call Now">📞 โทรเลย</a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnTH2" onclick="setLang('th')">TH</button>
+    <button class="lang-btn" id="btnEN2" onclick="setLang('en')">EN</button>
+  </div>
 </div>
 
 <!-- NAV -->
@@ -869,8 +874,9 @@ function setLang(lang) {
     const txt = el.getAttribute('data-' + lang);
     if (txt) el.innerHTML = txt;
   });
-  document.getElementById('btnTH').classList.toggle('active', lang === 'th');
-  document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+  });
   document.title = lang === 'th'
     ? 'ธงชัยพาณิชย์ปาย — วัสดุก่อสร้างครบวงจร'
     : 'Thongchai Panich Pai — Complete Building Supply Pai Thailand';
